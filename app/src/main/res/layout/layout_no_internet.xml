@@ -1,1 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
 
+    <!-- No Internet Image -->
+    <ImageView
+        android:id="@+id/imgNoInternet"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/no_internet"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/no_internet" />
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_below="@id/imgNoInternet"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet Connection"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please check your Wi-Fi or Mobile Data"
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Retry Button -->
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_below="@id/tvSubTitle"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:text="Retry"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
