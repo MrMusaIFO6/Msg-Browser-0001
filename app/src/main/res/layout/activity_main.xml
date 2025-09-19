@@ -1,1 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <!-- Navbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/teal_200"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:src="@android:drawable/ic_menu_compass"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"/>
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:hint="Search or type URL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_copy"
+            android:src="@android:drawable/ic_menu_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:src="@android:drawable/ic_menu_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <!-- WebView -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- No Internet Layout -->
+    <LinearLayout
+        android:id="@+id/no_internet_layout"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@android:drawable/ic_delete"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:text="No Internet Connection"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+</LinearLayout>
